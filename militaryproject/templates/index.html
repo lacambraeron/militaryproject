@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<header>
+    <h1>Welcome to Dawg Trainer, {{ first_name }} </h1>
+</header>
+
+<body>
+    {% if session["user_id"] == 3 %}
+    <p>Go to the <a href="/dashboard">Admin Dashboard</a> to view each user's progress</p>
+    {% else %}
+    <p>Congratulations on your enrollment into Upgrade Training!</p>
+    <p>Here you will find the resources you need for your job progression.</p>
+
+    <h3><a class="hlink" href="/library">Library</a></h3>
+    <p>The <a class="hlink2" href="/library">Library</a> has the references you need for each task you are required to be certified on.</p>
+    <p>You will find the Task Training Guides for each task. In it you will find each task's prerequisites, any auxiliary training, and the Task Evaluation Checklist
+        your supervisor will use to assess your skills.
+    </p>
+
+    <h3><a class="hlink" href="/sign">Sign</a></h3>
+    <p>Upon completion of all necessary requirements for each task, the <a class="hlink2" href="/sign">Sign page</a> will allow you to submit a certification of task completion.</p>
+
+    <h3><a class="hlink" href="/progress">Progress</a></h3>
+    <p>The <a class="hlink2" href="/progress">Progress page</a> tracks all your completed tasks.</p>
+    {% endif %}
+</body>
+{% endblock %}

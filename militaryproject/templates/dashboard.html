@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+
+<table class="tablestriped">
+    <tr>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Air Transportation</th>
+        <th>Career Progression</th>
+        <th>Organizational Structure</th>
+        <th>Types and Descriptions of Transport Aircrafts</th>
+        <th>Locate and Reference Transportation Forms, Publications, and Technical Orders</th>
+        <th>Inspect, Inventory, and Store 463L Pallets, Nets, and Tie Down Equipment</th>
+        <th>Build Single Pallet</th>
+        <th>Identify Types of Shoring</th>
+        <th>Perform Spotter - Chocker Duties</th>
+        <th>Vehicle Inspections</th>
+        <th>Perform Engine Running Off-load On-load (ERO) Operations</th>
+        <th>Air Transportation Information Systems</th>
+        <th>Compliance-Evaluation Fundamentals</th>
+    </tr>
+    {% if rows %}
+        {% for row in rows %}
+        <tr>
+            <td>{{ row.username }}</td>
+            <td>{{ row.first_name }}</td>
+            <td>{{ row.last_name }}</td>
+            <td>{{ row.task_1_timestamp }}</td>
+            <td>{{ row.task_1_1_timestamp }}</td>
+            <td>{{ row.task_1_2_timestamp }}</td>
+            <td>{{ row.task_1_3_timestamp }}</td>
+            <td>{{ row.task_1_4_timestamp }}</td>
+            <td>{{ row.task_1_5_timestamp }}</td>
+            <td>{{ row.task_1_6_timestamp }}</td>
+            <td>{{ row.task_1_7_timestamp }}</td>
+            <td>{{ row.task_1_8_timestamp }}</td>
+            <td>{{ row.task_1_9_timestamp }}</td>
+            <td>{{ row.task_1_10_timestamp }}</td>
+            <td>{{ row.task_1_11_timestamp }}</td>
+            <td>{{ row.task_1_12_timestamp }}</tr>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td colspan="2">No data available</td>
+        </tr>
+    {% endif %}
+</table>
+{% endblock %}

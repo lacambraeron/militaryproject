@@ -1,0 +1,33 @@
+.banner {
+    background-color: green;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tableheader {
+    font-weight: bold;
+}
+
+.td2 {
+    font-style: italic;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  .tablestriped {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+.hlink {
+    text-decoration: none;
+    color: black;
+}
+
+.hlink2 {
+    text-decoration: none;
+}

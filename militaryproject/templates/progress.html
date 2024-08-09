@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Progress
+{% endblock %}
+
+{% block main %}
+<table class="tablestriped">
+    <tr>
+        <th class="tableheader">Task Name</th>
+        <th class="tableheader">Date of Certification</th>
+
+    </tr>
+    {% if rows %}
+        {% for row in rows %}
+        <tr>
+            <td class="td2">{{ row.description }}</td>
+            <td>{{ row.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td colspan="2">No data available</td>
+        </tr>
+    {% endif %}
+</table>
+{% endblock %}
